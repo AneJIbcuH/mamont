@@ -1,19 +1,19 @@
 const mamont = document.querySelector(".mamont");
 const hand = document.querySelector(".hand");
 
-let timeout;
+let mamontTimeout;
 const holdTime = 1000;
 
 hand.addEventListener("touchstart", () => {
-  timeout = setTimeout(() => {
+    mamontTimeout = setTimeout(() => {
     mamont.play();
   }, holdTime);
 });
 
 hand.addEventListener("touchend", () => {
-  clearTimeout(timeout);
+  clearTimeout(mamontTimeout);
 });
 
 hand.addEventListener("touchmove", () => {
-  clearTimeout(timeout);
+  clearTimeout(mamontTimeout);
 });
